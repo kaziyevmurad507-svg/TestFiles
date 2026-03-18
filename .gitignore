@@ -1,0 +1,9 @@
+.idea/
+venv/
+__pycache__/
+*.pyc
+<<<<<<< HEAD
+.env
+=======
+.env
+>>>>>>> 52a1669fb007326a1b3508e391f1e1187ea280c9
