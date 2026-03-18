@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Download file generator</title>
+</head>
+
+<body>
+
+<h2>Generate Download File</h2>
+
+<form action="/download" method="get">
+
+<label>Select unit:</label>
+<input list="units" name="unit" required>
+
+<datalist id="units">
+<option value="GB">
+<option value="MB">
+<option value="KB">
+</datalist>
+
+<br><br>
+
+<label>Amount:</label>
+<input type="number" name="size" required>
+
+<br><br>
+
+<input type="submit" value="Download">
+
+</form>
+
+</body>
+</html>
