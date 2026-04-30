@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Download file generator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Download File Generator</title>
+
 </head>
 
 <body>
 
-<h2>Generate Download File</h2>
+    <div class="container">
+        <h2>Generate Download File</h2>
 
-<form action="/download" method="get">
+        <form action="/download" method="get">
 
-<label>Select unit:</label>
-<input list="units" name="unit" required>
+            <div>
+                <label for="unit">Choose the unit type:</label>
+                <select name="unit" id="unit" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="GB">GB</option>
+                    <option value="MB">MB</option>
+                    <option value="KB">KB</option>
+                </select>
+            </div>
 
-<datalist id="units">
-<option value="GB">
-<option value="MB">
-<option value="KB">
-</datalist>
+            <div>
+                <label for="size">File size:</label>
+                <input type="number" name="size" id="size" required placeholder="e.g. 10" min="1">
+            </div>
 
-<br><br>
+            <input type="submit" value="Download file">
+        </form>
+    </div>
+    <script>
+            const unitSelect = document.getElementById('unit');
 
-<label>Amount:</label>
-<input type="number" name="size" required>
+            unitSelect.addEventListener('change', function() {
 
-<br><br>
+                if (this.value !== '') {
 
-<input type="submit" value="Download">
-
-</form>
+                    const chooseOption = this.querySelector('option[value=""]');
+                    if (chooseOption) {
+                        chooseOption.remove();
+                    }
+                }
+            });
+    </script>
 
 </body>
 </html>
