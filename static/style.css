@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            padding: 4px ;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #444;
+        }
+       .select-wrapper {
+            position: relative;
+            width: 100%;
+       }
+
+        .select-wrapper select {
+            width: 100%;
+            padding: 14px 48px 14px 16px;
+            font-size: 17px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: white;
+            cursor: pointer;
+
+            /* Встроенная SVG стрелка (оптимальный размер) */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 24px;
+        }
+
+        .select-wrapper select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+
+            /* Синяя стрелка при фокусе */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233498db' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        }
+        select, input[type="number"] {
+            margin-top: 10px;
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 17px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:active {
+            background-color: #2980b9;
+        }
+        p {
+            margin-top: 30px;
+            color: #2c3e50;
+            }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Download File Generator</title>
@@ -15,7 +15,7 @@
 
         <form action="/download" method="get">
 
-            <div>
+            <div class="select-wrapper">
                 <label for="unit">Choose the unit type:</label>
                 <select name="unit" id="unit" required>
                     <option value="" selected>Choose...</option>
@@ -27,11 +27,12 @@
 
             <div>
                 <label for="size">File size:</label>
-                <input type="number" name="size" id="size" required placeholder="e.g. 10" min="1">
+                <input type="number" step="any" step="any" name="size" id="size" required placeholder="e.g. 10" min="0.1">
             </div>
 
             <input type="submit" value="Download file">
         </form>
+        <p id="note"><b>Note:</b>Traffic may take more quota than needed,so download file<b> 5-10% less </b>than you actually need</p>
     </div>
     <script>
             const unitSelect = document.getElementById('unit');

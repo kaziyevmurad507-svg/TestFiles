@@ -25,7 +25,7 @@ def generate_file(size):
 @app.route("/download")
 def download():
 
-    size = int(request.args.get("size"))
+    size = float(request.args.get("size").replace(',','.'))
     unit = request.args.get("unit")
 
     if unit == "GB":
